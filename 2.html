@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>I'm Sorry Gulbloo ❤️</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffdde8, #ffc1d5, #f9b4d0);
+    color: #7a1747;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+    padding: 25px 18px;
+}
+
+.card {
+    background: rgba(255,255,255,0.75);
+    padding: 30px 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(150,0,70,0.2);
+    margin: 25px 0;
+    animation: appear 1.5s ease;
+}
+
+h1 {
+    font-size: 38px;
+    color: #d41468;
+    margin-bottom: 15px;
+    animation: glow 2s infinite alternate;
+}
+
+h2 {
+    color: #d41468;
+    margin-bottom: 18px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #ff287c;
+    animation: floatUp 7s linear infinite;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #ff80b5; }
+    to { text-shadow: 0 0 25px #ff1680; }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-heart {
+    font-size: 75px;
+    animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px #d88aa9;
+    transition: 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+button {
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.yes {
+    background: #e91e72;
+    color: white;
+    box-shadow: 0 5px 15px #e88bac;
+}
+
+.yes:hover {
+    transform: scale(1.1);
+}
+
+.no {
+    background: white;
+    color: #d41468;
+}
+
+#response {
+    display: none;
+    font-size: 23px;
+    margin-top: 25px;
+    color: #d41468;
+    animation: appear 1s;
+}
+
+.upload {
+    background: #fff;
+    color: #d41468;
+    border: 2px dashed #e91e72;
+    padding: 12px;
+    width: 100%;
+}
+
+.footer {
+    padding: 30px;
+    font-size: 18px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Opening Section -->
+
+    <div class="card">
+
+        <div class="main-heart">❤️</div>
+
+        <h1>I'm Sorry, Gulbloo!</h1>
+
+        <h2>My Special Person 🌸</h2>
+
+        <p>
+            I know sometimes words cannot express everything
+            that our hearts want to say.
+            But today, I just want to tell you something...
+        </p>
+
+        <h2>I AM REALLY SORRY! 🥺</h2>
+
+        <p>
+            Please give me a little space in your heart
+            to make things right again.
+        </p>
+
+    </div>
+
+
+    <!-- Pictures Section -->
+
+    <div class="card">
+
+        <h2>My Beautiful Gulbloo 📸</h2>
+
+        <p>
+            Every picture reminds me of a beautiful memory.
+            Your smile deserves endless happiness.
+        </p>
+
+        <input
+            type="file"
+            id="photoUpload"
+            class="upload"
+            accept="image/*"
+            multiple
+        >
+
+        <div class="gallery" id="gallery">
+
+            <!-- Your uploaded pictures will appear here -->
+
+        </div>
+
+    </div>
+
+
+    <!-- Apology Letter -->
+
+    <div class="card">
+
+        <h2>A Little Message From My Heart 💌</h2>
+
+        <p>
+
+        Dear Gulbloo,
+
+        <br><br>
+
+        I don't know how to begin, but I know that I
+        genuinely want to say SORRY.
+
+        <br><br>
+
+        Maybe I made a mistake, maybe my words or actions
+        hurt you, or maybe I couldn't understand your feelings
+        the way I should have.
+
+        But believe me, hurting you was never what I wanted.
+
+        <br><br>
+
+        You deserve kindness, happiness, respect and
+        someone who understands your feelings.
+
+        I don't want my ego to become bigger than
+        the beautiful bond we share.
+
+        <br><br>
+
+        I cannot change what happened, but I can promise
+        to learn from it and try my best not to repeat it.
+
+        <br><br>
+
+        I miss your smile, your happiness and those
+        little moments that make everything special.
+
+        <br><br>
+
+        I am not asking you to forget everything instantly.
+        I just hope you can find a little place in your heart
+        to forgive me.
+
+        <br><br>
+
+        <strong>
+        I'm truly sorry, Gulbloo. ❤️
+        </strong>
+
+        </p>
+
+    </div>
+
+
+    <!-- Special Section -->
+
+    <div class="card">
+
+        <div class="main-heart">🥺</div>
+
+        <h2>Can You Forgive Me?</h2>
+
+        <p>
+            I promise to listen more, understand better,
+            and value your feelings.
+        </p>
+
+        <br>
+
+        <button class="yes" onclick="forgive()">
+            Yes, I Forgive You ❤️
+        </button>
+
+        <button class="no" onclick="timeMessage()">
+            I Need Some Time 🥺
+        </button>
+
+        <div id="response"></div>
+
+    </div>
+
+
+    <!-- Ending -->
+
+    <div class="footer">
+
+        <h2>One Last Thing...</h2>
+
+        <p>
+            No matter what, I hope your smile never fades.
+
+            <br><br>
+
+            Sending you a thousand hugs
+            and a million apologies! 🤗
+
+            <br><br>
+
+            <strong>Sorry, Gulbloo ❤️</strong>
+        </p>
+
+        <div class="main-heart">💗</div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+// Floating Hearts
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML = ["❤️","💕","💗","💖","🌸"][Math.floor(Math.random()*5)];
+
+    heart.style.left = Math.random()*100 + "vw";
+
+    heart.style.fontSize = (15 + Math.random()*30) + "px";
+
+    heart.style.animationDuration = (4 + Math.random()*5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 9000);
+
+}
+
+setInterval(createHeart, 350);
+
+
+// Picture Upload
+
+document.getElementById("photoUpload").addEventListener("change", function(event) {
+
+    const gallery = document.getElementById("gallery");
+
+    gallery.innerHTML = "";
+
+    Array.from(event.target.files).forEach(file => {
+
+        if (!file.type.startsWith("image/")) return;
+
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+
+            const img = document.createElement("img");
+
+            img.src = e.target.result;
+
+            gallery.appendChild(img);
+
+        };
+
+        reader.readAsDataURL(file);
+
+    });
+
+});
+
+
+// Forgiveness Button
+
+function forgive() {
+
+    const response = document.getElementById("response");
+
+    response.style.display = "block";
+
+    response.innerHTML = `
+    ❤️ YAYYYY! ❤️
+
+    <br><br>
+
+    Thank you, Gulbloo!
+
+    <br>
+
+    You just made my heart smile again.
+
+    <br><br>
+
+    Sending you the biggest hug ever! 🤗💗
+
+    <br><br>
+
+    You are special! 🌸
+    `;
+
+    for(let i=0; i<20; i++) {
+
+        setTimeout(createHeart, i*100);
+
+    }
+
+}
+
+
+// Need Time Button
+
+function timeMessage() {
+
+    const response = document.getElementById("response");
+
+    response.style.display = "block";
+
+    response.innerHTML = `
+    It's okay, Gulbloo. 🥺
+
+    <br><br>
+
+    Take all the time you need.
+
+    <br>
+
+    I respect your feelings.
+
+    <br><br>
+
+    Just remember...
+
+    <br>
+
+    My apology is genuine. ❤️
+    `;
+
+}
+
+</script>
+
+</body>
+</html>
